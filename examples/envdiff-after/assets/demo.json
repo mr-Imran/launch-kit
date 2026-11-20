@@ -1,0 +1,15 @@
+{
+  "title": "envdiff",
+  "cols": 88,
+  "rows": 18,
+  "cwd": "..",
+  "steps": [
+    {"comment": "which keys differ between dev.env and prod.env?"},
+    {"cmd": "envdiff examples/dev.env examples/prod.env",
+     "exec": "python3 envdiff.py examples/dev.env examples/prod.env"},
+    {"cmd": "envdiff examples/dev.env examples/prod.env --values",
+     "exec": "python3 envdiff.py examples/dev.env examples/prod.env --values",
+     "max_lines": 5, "keep": "tail"},
+    {"pause": 1}
+  ]
+}

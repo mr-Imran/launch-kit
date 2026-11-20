@@ -1,0 +1,10 @@
+{
+  "name": "portwho",
+  "version": "0.3.1",
+  "description": "See which process is holding a port, and kill it if you want.",
+  "bin": { "portwho": "bin/portwho.js" },
+  "keywords": ["port", "cli", "lsof", "kill", "developer-tools"],
+  "repository": { "type": "git", "url": "https://github.com/example-dev/portwho.git" },
+  "license": "MIT",
+  "engines": { "node": ">=18" }
+}

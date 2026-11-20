@@ -1,0 +1,8 @@
+__pycache__/
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# The agent's output also ignored launch/ here (working notes, not part of the project).
+# That one line is removed in this example so the notes and drafts are visible in the repository.

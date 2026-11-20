@@ -1,0 +1,10 @@
+{
+  "name": "launch-kit",
+  "version": "0.1.0",
+  "description": "Make a GitHub repository launch-ready and score it from 0 to 100: README pitch, real terminal demo, social preview image, topics, and launch post drafts.",
+  "author": { "name": "mr-Imran", "url": "https://github.com/mr-Imran" },
+  "homepage": "https://github.com/mr-Imran/launch-kit",
+  "repository": "https://github.com/mr-Imran/launch-kit",
+  "license": "MIT",
+  "keywords": ["agent-skills", "readme", "github", "open-source", "launch", "developer-tools"]
+}

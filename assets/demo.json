@@ -1,0 +1,14 @@
+{
+  "//": "Re-record: python3 skills/launch-kit/scripts/term_demo.py --spec assets/demo.json -o assets/demo.svg",
+  "title": "launch-kit",
+  "cols": 90,
+  "cwd": "..",
+  "steps": [
+    {"comment": "A working tool with a 14-line README"},
+    {"cmd": "python3 skills/launch-kit/scripts/audit.py examples/envdiff-before --summary"},
+    {"pause": 1.5},
+    {"comment": "One prompt later: \"get this repo ready to launch\""},
+    {"cmd": "python3 skills/launch-kit/scripts/audit.py examples/envdiff-after --summary"},
+    {"pause": 2}
+  ]
+}

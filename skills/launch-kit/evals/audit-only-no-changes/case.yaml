@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: audit-only-no-changes
+expected_outcome: |
+  A readiness assessment with an overall score or rating and a prioritised list of fixes, flagging at least the missing license, the missing demo and the weak opening line. No file in the repository is created or modified.
+context:
+  scaffold_script: place-files.sh

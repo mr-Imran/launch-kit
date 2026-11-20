@@ -1,0 +1,32 @@
+diff --git a/envdiff.py b/envdiff.py
+index c529def..dcd3c2e 100644
+--- a/envdiff.py
++++ b/envdiff.py
+@@ -38,7 +38,11 @@ def main(argv=None):
+     ap.add_argument("--json", action="store_true", help="machine-readable output")
+     args = ap.parse_args(argv)
+ 
+-    a, b = parse(args.first), parse(args.second)
++    try:
++        a, b = parse(args.first), parse(args.second)
++    except (OSError, UnicodeDecodeError) as exc:
++        print("envdiff: %s" % exc, file=sys.stderr)
++        return 2
+     d = diff(a, b)
+     if args.json:
+         print(json.dumps(d, indent=2))
+diff --git a/tests/test_envdiff.py b/tests/test_envdiff.py
+index 1c4e850..57116c9 100644
+--- a/tests/test_envdiff.py
++++ b/tests/test_envdiff.py
+@@ -19,3 +19,10 @@ def test_parse(tmp_path):
+     p = tmp_path / "x.env"
+     p.write_text('# c\nexport A=1\nB="two"\n\nbad line\n')
+     assert envdiff.parse(str(p)) == {"A": "1", "B": "two"}
++
++
++def test_unreadable_file_exits_2(tmp_path, capsys):
++    p = tmp_path / "a.env"
++    p.write_text("A=1\n")
++    assert envdiff.main([str(p), str(tmp_path / "nope.env")]) == 2
++    assert "nope.env" in capsys.readouterr().err

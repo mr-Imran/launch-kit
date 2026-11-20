@@ -1,0 +1,21 @@
+[project]
+name = "envdiff"
+version = "0.1.0"
+description = "Compare two .env files and see which keys are missing or different, without printing the values"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["dotenv", "env", "environment-variables", "diff", "cli", "configuration"]
+
+[project.urls]
+Repository = "https://github.com/OWNER/envdiff"
+Issues = "https://github.com/OWNER/envdiff/issues"
+
+[project.scripts]
+envdiff = "envdiff:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["envdiff"]

@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: full-launch-prep-weak-readme
+expected_outcome: |
+  The README opens with a concrete one-line pitch, a demo of real envdiff output near the top, and an install command that works for an unpublished package. Hacker News gets notes for the author to write from (its guidelines ask for no generated text) and Reddit gets drafts. Nothing is invented (no fake numbers, no PyPI install claim), the license choice is left to the author or clearly flagged, and the final message reports readiness before and after plus the manual steps the author still has to do.
+context:
+  scaffold_script: place-files.sh

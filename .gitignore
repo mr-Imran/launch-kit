@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+# eval run output (see CONTRIBUTING.md)
+skills/launch-kit/evals/results/
+
+# launch notes and drafts: working material, not part of the project.
+# Anchored to the top level so examples/envdiff-after/launch/ stays visible.
+/launch/
